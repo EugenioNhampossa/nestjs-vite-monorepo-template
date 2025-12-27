@@ -48,7 +48,7 @@ import { AppController } from './app.controller';
       useClass: ExtendedPrismaConfigService,
     }),
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'client'),
+      rootPath: join(process.cwd(), '..', 'web', 'dist'),
       exclude: ['/api{/*path}'],
     }),
     ResilienceModule.forRoot({}),

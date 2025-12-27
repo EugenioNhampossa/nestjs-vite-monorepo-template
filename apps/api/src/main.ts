@@ -9,9 +9,7 @@ async function bootstrap() {
 
   app.enableCors();
   app.useGlobalPipes(validationPipeOptions);
-  app.setGlobalPrefix(AppModule.prefix, {
-    exclude: [{ path: '/', method: RequestMethod.GET }],
-  });
+  app.setGlobalPrefix(AppModule.prefix);
   app.use(HelmetConfig);
 
   const httpAdapterHost = app.get(HttpAdapterHost);
