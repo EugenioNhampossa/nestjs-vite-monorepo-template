@@ -1,7 +1,7 @@
-import { contract } from "@repo/api-contract";
+import { todoContract } from "@repo/api-contract";
 import { initQueryClient } from "@ts-rest/react-query";
 
-const apiClient = initQueryClient(contract, {
+const apiClient = initQueryClient(todoContract, {
   baseHeaders: {},
   baseUrl: "",
 });
